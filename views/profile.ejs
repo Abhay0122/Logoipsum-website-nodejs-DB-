@@ -1,0 +1,46 @@
+<%-include('header')%>
+  <!-- nav -->
+  <%- include('nav-home')%>
+
+    <!-- profile -->
+
+    <div class="profile_content_wrapper">
+      <!-- left -->
+      <div class="profile_content_left">
+        <div class="profile_content_left_top">
+          <h1>
+            <%= user.name%>
+          </h1>
+        </div>
+        <div class="profile_content_left_middle">
+          <nav>
+            <a href="/profile"><span>Home</span></a>
+            <a href="/about"><span>About</span></a>
+          </nav>
+        </div>
+        <div class="profile_content_left_bottom">
+
+        </div>
+      </div>
+      <!-- right -->
+      <div class="profile_content_right">
+        <div id="user_profile_img"
+          style="background-image: url('/uploads/<%= user.avatar%>'); background-position: center; background-size: contain; ">
+        </div>
+        <h2>
+          <%= user.name%>
+        </h2>
+        <p>
+          <%= user.bio%>
+        </p>
+        <a href="/settings">Edit profile</a>
+      </div>
+
+    </div>
+
+
+
+
+
+    <!--  -->
+    <%-include('footer')%>

@@ -1,0 +1,32 @@
+<%-include('header')%>
+  <!-- nav -->
+  <%- include('nav-home')%>
+
+
+
+
+    <div class="home-page_blog_wrapper">
+      <h1>Logoipsum user's Blog</h1>
+      <% blogs.forEach((elem)=> { %>
+        <div class="author_story_card">
+          <div class="card_blog_top">
+            <img src="/uploads/<%= elem.author.avatar%>" alt="" />
+            <span>
+              <%= elem.author.name%>
+            </span>
+            <span>
+              <%= elem.createdAt%>
+            </span>
+          </div>
+          <div class="card_blog_bottom">
+            <%- elem.blog%>
+          </div>
+        </div>
+        <%})%>
+    </div>
+
+
+
+
+    <!--  -->
+    <%-include('footer')%>

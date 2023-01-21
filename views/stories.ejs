@@ -1,0 +1,39 @@
+<%-include('header')%>
+  <!-- nav -->
+  <%- include('nav-home')%>
+
+
+  <div class="home-page_blog_wrapper">
+    <h1>Your Blogs</h1>
+      <% stories.forEach((elem)=>{%>
+        <!-- <%= JSON.stringify(elem.blogs)%> -->
+      <div class="author_story_card">
+        <!--  -->
+          <div class="card_blog_top">
+            <!--  -->
+            <img src="/uploads/<%= user.avatar%>" alt="" />
+            <!--  -->
+            <span>
+              <%= user.name%>
+            </span>
+            <!--  -->
+            <span>
+              - <%= elem.createdAt%>
+            </span>
+            <!--  -->
+          </div>
+          <!--  -->
+          <div class="card_blog_bottom">
+            <%- elem.blog%>
+          </div>
+        <!--  -->
+      </div>
+      <%})%>
+  </div>
+
+
+
+
+
+      <!--  -->
+      <%-include('footer')%>

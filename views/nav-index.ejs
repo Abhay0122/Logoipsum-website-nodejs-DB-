@@ -1,0 +1,66 @@
+<nav class="home-nav">
+    <!--  -->
+    <div class="home-nav-left">
+        <i class="ri-menu-2-line"></i>
+    </div>
+    <!--  -->
+    <div class="home-nav_middle">
+        <a href="/">
+            <h1>
+                Logo<span>ipsum</span>
+            </h1>
+            <div class="logodot"></div>
+        </a>
+    </div>
+    <!--  -->
+    <div class="home-nav-right">
+        <a href="/signup">Read blog</a>
+    </div>
+    <!--  -->
+</nav>
+
+
+<!-- overlay -->
+<div class="menu-overlay">
+    <!--  -->
+    <i class="ri-close-fill"></i>
+    <!--  -->
+    <div class="menuheading">
+        <h1>Start <span>Blog</span></h1>
+        <div class="logodot"></div>
+    </div>
+    <!--  -->
+    <div class="menu-content">
+        <!--  -->
+        <div class="menu-mid-img">
+            <img src="/images/icons8-faces-64.png" alt="">
+        </div>
+        <!--  -->
+        <h1>Join the discussion</h1>
+        <p>Looking to share your feedback and join in on the conversation?</p>
+        <a class="menu-signin_btn" href="/signup">Signup to logoipsum</a>
+        <div class="or_text_wrapper">
+            <h3>OR</h3>
+        </div>
+        <a class="menu-signup_btn" href="/signin">signin to logoipsum</a>
+    </div>
+    <!--  -->
+</div>
+
+
+
+
+<!--  -->
+<script>
+    const menuOverlay_cross_btn = document.querySelector('.menu-overlay>i');
+    const menuOverlay = document.querySelector('.menu-overlay');
+    const menuBtn = document.querySelector('.home-nav-left>i');
+
+    menuBtn.addEventListener("click", () => {
+        menuOverlay.style.transform = "translatex(0)";
+    });
+    menuOverlay_cross_btn.addEventListener("click", () => {
+        menuOverlay.style.transform = "translatex(-100%)";
+    });
+
+</script>
